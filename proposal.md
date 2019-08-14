@@ -36,6 +36,18 @@ _(approx. 1-2 paragraphs)_
 
 In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
+
+We use the weighted mean absolute error (WMAE) as evaluation metric.
+
+![equation](https://latex.codecogs.com/gif.latex?WMAE%20%3D%20%5Cfrac%7B1%7D%7B%5Csum%20w_%7Bi%7D%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%7Bw_%7Bi%7D%7D%5Cleft%20%7C%20%7By_%7Bi%7D%7D%20-%20%5Cwidehat%7By_%7Bi%7D%7D%20%5Cright%20%7C)
+
+where
+
+n is the number of rows
+ŷ i is the predicted sales
+yi is the actual sales
+wi are weights. w = 5 if the week is a holiday week, 1 otherwise
+
 ### Project Design
 _(approx. 1 page)_
 
