@@ -59,9 +59,18 @@ This file contains additional data related to the store, department, and regiona
 * IsHoliday - whether the week is a special holiday week
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+I will confirm the relationship between features and sales, also condct feature engineering if needed.
+
+After that, I will build the following moedls for sales forecast;
+* ARIMA
+* Decision Tree Regressor(Bench mark)
+* Random Forest Regressor
+* Decision Tree Regressor
+* Graient Boosting Regressor
+* Long Short Term Memory
+
+I will also use the ensemple model if needed.
 
 ### Benchmark Model
 
