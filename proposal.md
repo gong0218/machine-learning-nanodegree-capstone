@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 Takayuki Sato  
-August 12th, 2019
+August 15th, 2019
 
 ## Proposal
 _(approx. 2-3 pages)_
@@ -17,7 +17,7 @@ Walmart Inc. is an American multinational retail corporation that operates a cha
 
 In their kaggle competition[(Walmart Store Sales Forecasting)](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/data), they provide historical sales data for 45 Walmart stores located in different regions. Each store contains many departments. The objective of this competition is to project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact.
 
-This is a typical time series problem so that ETS, ARIMA, xgboost, and LSTM are expected to be potential solutions.
+This is a typical time series problem. General time series modeling framework(e.g. ETS, ARIMA), Gradient Boosting framework(e.g. xgboost), and Neural Network framework(e.g. LSTM) are expected to be potential solutions.
 
 ### Datasets and Inputs
 
