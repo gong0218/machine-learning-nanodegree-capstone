@@ -11,6 +11,14 @@ _(approx. 1-2 paragraphs)_
 
 In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
 
+Sales forecasting is very important for retail business. An accurate sales forecast helps companies to
+* Understand companys' performance / customer demand
+* Change strategy for the companys' growth
+* Conduct beneficial Marketing promotion
+* Conduct better management of Inventory
+* Adjust price adequately
+
+
 ### Problem Statement
 
 Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets, discount department stores, and grocery stores. It is the world's largest company by revenue and the largest private employer in the world.
