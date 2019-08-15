@@ -4,7 +4,6 @@ Takayuki Sato
 August 15th, 2019
 
 ## Proposal
-_(approx. 2-3 pages)_
 
 ### Domain Background
 
@@ -15,7 +14,7 @@ Sales forecasting is very important for retail business. An accurate sales forec
 * Conduct better management of Inventory
 * Adjust price adequately
 
-Many factors, such as, Past sales result / Seasonality / Marketing promotion effect / Consumer Behavior / Price / Competitors' situation / weather / Economic indicators may affect sales forecasting. Companies need to identify important factors for an accurate sales forecasting.  
+Many factors, such as, Past sales result / Seasonality / Marketing promotion effect / Consumer Behavior / Price / Competitors' situation / weather / Economic indicators may affect sales forecasting result. Companies need to identify important factors and select an adequate methodology for an accurate sales forecasting.  
 
 ### Problem Statement
 
