@@ -7,9 +7,6 @@ August 15th, 2019
 _(approx. 2-3 pages)_
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
-
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
 
 Sales forecasting is very important for retail business. An accurate sales forecast helps companies to
 * Understand companys' performance / customer demand
@@ -18,6 +15,7 @@ Sales forecasting is very important for retail business. An accurate sales forec
 * Conduct better management of Inventory
 * Adjust price adequately
 
+Many factors, such as, Past sales result / Seasonality / Marketing promotion effect / Consumer Behavior / Price / Competitors' situation / weather / Economic indicators may affect sales forecasting. Companies need to identify important factors for an accurate sales forecasting.  
 
 ### Problem Statement
 
