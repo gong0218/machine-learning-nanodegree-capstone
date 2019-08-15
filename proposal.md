@@ -94,6 +94,14 @@ _(approx. 1 page)_
 
 In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
 
+* Data exploration
+  * Confirm basic statistics / trend / seasonality / correlation btween features.
+* Data cleaning / Feature engineering
+  * Conduct removing missing value / scaling / removing outliers / dimention reduction of features.
+* Splitting the data into training(80%) and testing(20%)
+* Training
+  * Tuning hyper-parameters if needed.
+* Forecast / Confirm the performance / Select the best model
 -----------
 
 **Before submitting your proposal, ask yourself. . .**
