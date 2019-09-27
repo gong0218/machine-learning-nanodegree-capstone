@@ -25,10 +25,18 @@ In their kaggle competition[(Walmart Store Sales Forecasting)](https://www.kaggl
 This is a typical time series problem. General time series modeling framework(e.g. ETS, ARIMA), Gradient Boosting framework(e.g. xgboost), and Neural Network framework(e.g. LSTM) are expected to be potential solutions.
 
 ### Metrics
-In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
-- _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
-- _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
+I used the weighted mean absolute error (WMAE) as evaluation metric.
 
+![equation](https://latex.codecogs.com/gif.latex?WMAE%20%3D%20%5Cfrac%7B1%7D%7B%5Csum%20w_%7Bi%7D%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%7Bw_%7Bi%7D%7D%5Cleft%20%7C%20%7By_%7Bi%7D%7D%20-%20%5Cwidehat%7By_%7Bi%7D%7D%20%5Cright%20%7C)
+
+where
+
+n is the number of rows
+ŷ i is the predicted sales
+yi is the actual sales
+wi are weights. w = 5 if the week is a holiday week, 1 otherwise
+
+By using the WMAE metric, I can select an accurate model for holiday seasons' sales that is especially important for Walmart.
 
 ## II. Analysis
 _(approx. 2-4 pages)_
