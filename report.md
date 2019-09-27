@@ -6,9 +6,16 @@ September 28th, 2019
 ## I. Definition
 
 ### Project Overview
-In this section, look to provide a high-level overview of the project in layman’s terms. Questions to ask yourself when writing this section:
-- _Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?_
-- _Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?_
+Sales forecasting is very important for retail business. An accurate sales forecast helps companies to
+* Understand companys' performance / customer demand
+* Change strategy for the companys' growth
+* Conduct beneficial Marketing promotion
+* Conduct better management of Inventory
+* Adjust price adequately
+
+Many factors, such as, Past sales result / Seasonality / Marketing promotion effect / Consumer Behavior / Price / Competitors' situation / weather / Economic indicators may affect sales forecasting result. There are also many methodologies for time series forecast [1, 2]. Companies need to identify important factors and select an adequate methodology for an accurate sales forecasting.
+
+In this project, I created machine learning models for time series sales forecast. I used the histrical sales data for 45 Walmart stores located in different regions.
 
 ### Problem Statement
 Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets, discount department stores, and grocery stores. It is the world's largest company by revenue and the largest private employer in the world.
