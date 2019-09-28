@@ -39,14 +39,39 @@ wi are weights. w = 5 if the week is a holiday week, 1 otherwise
 By using the WMAE metric, I can select an accurate model for holiday seasons' sales that is especially important for Walmart.
 
 ## II. Analysis
-_(approx. 2-4 pages)_
 
 ### Data Exploration
-In this section, you will be expected to analyze the data you are using for the problem. This data can either be in the form of a dataset (or datasets), input data (or input files), or even an environment. The type of data should be thoroughly described and, if possible, have basic statistics and information presented (such as discussion of input features or defining characteristics about the input or environment). Any abnormalities or interesting qualities about the data that may need to be addressed have been identified (such as features that need to be transformed or the possibility of outliers). Questions to ask yourself when writing this section:
-- _If a dataset is present for this problem, have you thoroughly discussed certain features about the dataset? Has a data sample been provided to the reader?_
-- _If a dataset is present for this problem, are statistics about the dataset calculated and reported? Have any relevant results from this calculation been discussed?_
-- _If a dataset is **not** present for this problem, has discussion been made about the input space or input data for your problem?_
-- _Are there any abnormalities or characteristics about the input space or dataset that need to be addressed? (categorical variables, missing values, outliers, etc.)_
+I will use the dataset provided by the kaggle competition.
+[(Walmart Store Sales Forecasting)](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/data)
+
+**stores.csv**
+
+This file contains anonymized information about the 45 stores, indicating the type and size of store.
+
+**train.csv / test.csv**
+
+Train data is the historical weekly data, which covers to 2010-02-05 to 2012-11-01. Within this file you will find the following fields:
+
+* Store - the store number
+* Dept - the department number
+* Date - the week
+* Weekly_Sales -  sales for the given department in the given store
+* IsHoliday - whether the week is a special holiday week
+
+Test data is the historical weekly data, which covers to 2012-11-02 to 2013-08-02, with the same fields except for sales.
+
+**features.csv**
+
+This file contains additional data related to the store, department, and regional activity for the given dates. It contains the following fields:
+
+* Store - the store number
+* Date - the week
+* Temperature - average temperature in the region
+* Fuel_Price - cost of fuel in the region
+* MarkDown1-5 - anonymized data related to promotional markdowns that Walmart is running. MarkDown data is only available after Nov 2011, and is not available for all stores all the time. Any missing value is marked with an NA.
+* CPI - the consumer price index
+* Unemployment - the unemployment rate
+* IsHoliday - whether the week is a special holiday week
 
 ### Exploratory Visualization
 In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
