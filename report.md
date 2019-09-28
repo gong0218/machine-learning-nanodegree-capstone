@@ -41,8 +41,9 @@ By using the WMAE metric, I can select an accurate model for holiday seasons' sa
 ## II. Analysis
 
 ### Data Exploration
-I will use the dataset provided by the kaggle competition.
+The dataset provided by the kaggle competition.
 [(Walmart Store Sales Forecasting)](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/data)
+includes historical sales data for 45 Walmart stores located in different regions.
 
 **stores.csv**
 
