@@ -147,13 +147,15 @@ I used Decision Tree Regressor as a bench mark model and made comparison between
 On the test dataset, 
 
 ## III. Methodology
-_(approx. 3-5 pages)_
 
 ### Data Preprocessing
-In this section, all of your preprocessing steps will need to be clearly documented, if any were necessary. From the previous section, any of the abnormalities or characteristics that you identified about the dataset will be addressed and corrected here. Questions to ask yourself when writing this section:
-- _If the algorithms chosen require preprocessing steps like feature selection or feature transformations, have they been properly documented?_
-- _Based on the **Data Exploration** section, if there were abnormalities or characteristics that needed to be addressed, have they been properly corrected?_
-- _If no preprocessing is needed, has it been made clear why?_
+I conducted some feature engineering to make the given dataset to fit machine learning models.
+
+- isHoliday data is bool type, so I casted that to integer[0,1].
+- Markdown data has some NaN / negative values, so I convert that to zero.
+- Converted Date(yyyy-mm-dd format) to "year", "month", "week", and "day".
+- Store data is categorical, so I used One-Hot encoding.
+
 
 ### Implementation
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
