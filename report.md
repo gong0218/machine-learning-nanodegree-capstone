@@ -49,6 +49,8 @@ includes historical sales data for 45 Walmart stores located in different region
 
 This file contains anonymized information about the 45 stores, indicating the type and size of store.
 
+![store.csv](path/store_head.png "store.csv")
+
 **train.csv / test.csv**
 
 Train data is the historical weekly data, which covers to 2010-02-05 to 2012-11-01. Within this file you will find the following fields:
@@ -57,7 +59,9 @@ Train data is the historical weekly data, which covers to 2010-02-05 to 2012-11-
 * Dept - the department number
 * Date - the week
 * Weekly_Sales -  sales for the given department in the given store
-* IsHoliday - whether the week is a special holiday week
+* IsHoliday - whether the week is a special holiday week  
+
+![train.csv](path/train_head.png "train.csv")
 
 Test data is the historical weekly data, which covers to 2012-11-02 to 2013-08-02, with the same fields except for sales.
 
@@ -73,6 +77,8 @@ This file contains additional data related to the store, department, and regiona
 * CPI - the consumer price index
 * Unemployment - the unemployment rate
 * IsHoliday - whether the week is a special holiday week
+
+![feature.csv](path/feature_head.png "feature.csv")
 
 ### Exploratory Visualization
 In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
