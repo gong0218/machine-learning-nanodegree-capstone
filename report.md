@@ -155,6 +155,7 @@ I conducted some feature engineering to make the given dataset to fit machine le
 - Markdown data has some NaN / negative values, so I convert that to zero.
 - Converted Date(yyyy-mm-dd format) to "year", "month", "week", and "day".
 - Store data is categorical, so I used One-Hot encoding.
+- (For only LSTM) I used Min-Max scaler to scale the input in the range of 0 to 1.
 
 
 ### Implementation
