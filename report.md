@@ -116,13 +116,35 @@ In this section, you will need to discuss the algorithms and techniques you inte
 - _Are the techniques to be used thoroughly discussed and justified?_
 - _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
 
+
+In this project, I used Random Forest, XGBoost, and LSTM for solving the problem. Weekly sales is the target.
+
+The following parameters can be mainly tuned to optimize the model.
+
+- Random Forest
+  - number of estimators
+  - minimum sample leaf size
+  
+- XGBoost
+  - The fraction of columns to be randomly samples for each tree
+  - Learning rate
+  - The maximum depth of a tree
+  - L1 regularization term on weight
+  - number of estimators
+  
+- LSTM
+  - number of layers
+  - number of nodes
+  - the number of hidden units
+  - epochs
+
 ### Benchmark
 In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
 - _Has some result or value been provided that acts as a benchmark for measuring performance?_
 - _Is it clear how this result or value was obtained (whether by data or by hypothesis)?_
 
 I used Decision Tree Regressor as a bench mark model and made comparison between all models performance and the benchmark. Decision Tree Regressor is a tree-like model that is simple to understand and interpret, but often relatively unstable.
-
+On the test dataset, 
 
 ## III. Methodology
 _(approx. 3-5 pages)_
