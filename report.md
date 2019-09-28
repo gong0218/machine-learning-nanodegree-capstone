@@ -98,6 +98,22 @@ In this section, you will need to provide some form of visualization that summar
 - _Is the visualization thoroughly analyzed and discussed?_
 - _If a plot is provided, are the axes, title, and datum clearly defined?_
 
+![heatmap](path/heatmap.png "heatmap") 
+
+![store_pi_chart](path/store_pi_chart.png "store_pi_chart")  
+
+![scatter_size_sales_byStore](path/scatter_size_sales_byStore.png "scatter_size_sales_byStore")
+
+![time_series](path/time_series.png "time_series")  
+
+Below chart is the decomposition of Total sales. We can see there is an upward trend in the series. There is also seasonality, huge spikes around every December.
+
+![time_series_decomp](path/time_series_decomp.png "time_series_decomp")      
+
+![time_series_byStore](path/time_series_byStore.png "time_series_byStore")  
+
+![time_series_byDept](path/time_series_byDept.png "time_series_byDept")
+
 ### Algorithms and Techniques
 In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
 - _Are the algorithms you will use, including any default variables/parameters in the project clearly defined?_
