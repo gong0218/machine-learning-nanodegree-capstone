@@ -139,10 +139,6 @@ The following parameters can be mainly tuned to optimize the model.
   - epochs
 
 ### Benchmark
-In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
-- _Has some result or value been provided that acts as a benchmark for measuring performance?_
-- _Is it clear how this result or value was obtained (whether by data or by hypothesis)?_
-
 I used Decision Tree Regressor as a bench mark model and made comparison between all models performance and the benchmark. Decision Tree Regressor is a tree-like model that is simple to understand and interpret, but often relatively unstable.
 On the test dataset, 
 
@@ -159,10 +155,27 @@ I conducted some feature engineering to make the given dataset to fit machine le
 
 
 ### Implementation
-In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
-- _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
-- _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
-- _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
+
+- Random Forest
+  - number of estimators:
+  - minimum sample leaf size:
+  
+- XGBoost
+  - The fraction of columns to be randomly samples for each tree:
+  - Learning rate:
+  - The maximum depth of a tree:
+  - L1 regularization term on weight:
+  - number of estimators:
+  
+- LSTM implemented by using Keras module
+  - number of layers:
+  - number of nodes:
+  - the number of hidden units:
+  - epochs:
+
+The LSTM model is implemented by using Keras module. The network has 
+
+The model's performance is evaluated by its WMAE score on the test data.
 
 ### Refinement
 In this section, you will need to discuss the process of improvement you made upon the algorithms and techniques you used in your implementation. For example, adjusting parameters for certain models to acquire improved solutions would fall under the refinement category. Your initial and final solutions should be reported, as well as any significant intermediate results as necessary. Questions to ask yourself when writing this section:
@@ -172,7 +185,6 @@ In this section, you will need to discuss the process of improvement you made up
 
 
 ## IV. Results
-_(approx. 2-3 pages)_
 
 ### Model Evaluation and Validation
 In this section, the final model and any supporting qualities should be evaluated in detail. It should be clear how the final model was derived and why this model was chosen. In addition, some type of analysis should be used to validate the robustness of this model and its solution, such as manipulating the input data or environment to see how the model’s solution is affected (this is called sensitivity analysis). Questions to ask yourself when writing this section:
@@ -189,7 +201,6 @@ In this section, your model’s final solution and its results should be compare
 
 
 ## V. Conclusion
-_(approx. 1-2 pages)_
 
 ### Free-Form Visualization
 In this section, you will need to provide some form of visualization that emphasizes an important quality about the project. It is much more free-form, but should reasonably support a significant result or characteristic about the problem that you want to discuss. Questions to ask yourself when writing this section:
