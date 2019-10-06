@@ -184,8 +184,14 @@ In this section, you will need to discuss the process of improvement you made up
 - _Are intermediate and final solutions clearly reported as the process is improved?_
 
 I conducted improvement of the algorithms above by Hyper parameter tuning.
-'GridSearch'
-
+**GridSearch**
+max_depth: 
+learning_rate): 
+min_child_weight: 
+colsample_bytree:  
+colsample_bylevel: 
+reg_lambda: 
+subsample:
 
 ## IV. Results
 
