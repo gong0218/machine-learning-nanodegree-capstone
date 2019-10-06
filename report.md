@@ -183,6 +183,9 @@ In this section, you will need to discuss the process of improvement you made up
 - _Is the process of improvement clearly documented, such as what techniques were used?_
 - _Are intermediate and final solutions clearly reported as the process is improved?_
 
+I conducted improvement of the algorithms above by Hyper parameter tuning.
+'GridSearch'
+
 
 ## IV. Results
 
