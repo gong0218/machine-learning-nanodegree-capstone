@@ -225,10 +225,10 @@ In this section, you will summarize the entire end-to-end problem solution and d
 - _Does the final model and solution fit your expectations for the problem, and should it be used in a general setting to solve these types of problems?_
 
 ### Improvement
-In this section, you will need to provide discussion as to how one aspect of the implementation you designed could be improved. As an example, consider ways your implementation can be made more general, and what would need to be modified. You do not need to make this improvement, but the potential solutions resulting from these changes are considered and compared/contrasted to your current solution. Questions to ask yourself when writing this section:
-- _Are there further improvements that could be made on the algorithms or techniques you used in this project?_
-- _Were there algorithms or techniques you researched that you did not know how to implement, but would consider using if you knew how?_
-- _If you used your final solution as the new benchmark, do you think an even better solution exists?_
+In this project, Basically, I only used original features and forecast methodlogies since I had to take a lot of time for hyper parameter tuning. If I were to continue with this project, adding features, such as, lagged variables and other economic indicators(GDP growth, consumer confidence index, etc.) is one of improvements I should explore.   
+Also, using a state space model could help improve the accuracy since this sales data obviously has seasonality and trend as I mentioned in Data Exploration section.
+
+
 
 -----------
 
