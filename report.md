@@ -203,11 +203,14 @@ In this section, the final model and any supporting qualities should be evaluate
 - _Can results found from the model be trusted?_
 
 ### Justification
-In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:
-- _Are the final results found stronger than the benchmark result reported earlier?_
-- _Have you thoroughly analyzed and discussed the final solution?_
-- _Is the final solution significant enough to have solved the problem?_
+---- achieved WMAE ---- on the testing data, that is significantly better thant Decision Tree as the benchmark.
 
+|  Model  |  WMAE  |
+| ------  | ------ |
+|  Decision Tree(BM)  |  6,875  |
+|  Random Forest  |  4,425  |
+|  XGBoost  |  4,424  |
+|  LSTM  |  3,000  |
 
 ## V. Conclusion
 
