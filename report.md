@@ -183,15 +183,45 @@ In this section, you will need to discuss the process of improvement you made up
 - _Is the process of improvement clearly documented, such as what techniques were used?_
 - _Are intermediate and final solutions clearly reported as the process is improved?_
 
-I conducted improvement of the algorithms above by Hyper parameter tuning.
-**GridSearch**
-max_depth: 
-learning_rate): 
-min_child_weight: 
-colsample_bytree:  
-colsample_bylevel: 
-reg_lambda: 
-subsample:
+I conducted improvement of the algorithms' performance by Hyper parameter tuning.
+Following parameters were tuned by using **GridSearchCV**.
+
+XGBoost  
+
+**max_depth**: 
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value:  
+
+**learning_rate)**:  
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value:  
+  
+**min_child_weight**: 
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value: 
+
+**colsample_bytree**:  
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value: 
+
+**colsample_bylevel**: 
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value:  
+
+**reg_lambda**: 
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value:
+
+**subsample**: 
+  - Initial value:  
+  - Search values: [0.5,0.6,0.8,1]  
+  - Final value: 
 
 ## IV. Results
 
