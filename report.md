@@ -106,7 +106,7 @@ We can see almost the same tendency by each store/department, but some stores/de
 ![time_series_byDept](path/time_series_byDept.png "time_series_byDept")
 
 Walmart has three types of store. big sized A type store has big sales, whereas small sized C type has small sales.
-![store_pi_chart](path/store_pi_chart.png "store_pi_chart")  
+![store_pi_chart](path/pie_chart_update.png "store_pi_chart")  
 
 ![scatter_size_sales_byStore](path/scatter_size_sales_byStore.png "scatter_size_sales_byStore")
 
