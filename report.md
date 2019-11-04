@@ -117,26 +117,28 @@ In this section, you will need to discuss the algorithms and techniques you inte
 - _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
 
 
-In this project, I used Random Forest, XGBoost, and LSTM for solving the problem. Weekly sales is the target.
+In this project, I used Random Forest, XGBoost, and Long short-term memory for solving the problem. Weekly sales is the target.
 
-The following parameters can be mainly tuned to optimize the model.
+
+
+The following parameters are mainly tuned to optimize the model(and a default parameter I tried at first.).
 
 - Random Forest
-  - number of estimators
-  - minimum sample leaf size
+  - number of estimators()(default: )
+  - minimum sample leaf size()(default: )
   
 - XGBoost
   - The fraction of columns to be randomly samples for each tree
-  - Learning rate
-  - The maximum depth of a tree
-  - L1 regularization term on weight
-  - number of estimators
+  - Learning rate()(default: )
+  - The maximum depth of a tree()(default: )
+  - L1 regularization term on weight()(default: )
+  - number of estimators()(default: )
   
 - LSTM
-  - number of layers
-  - number of nodes
-  - the number of hidden units
-  - epochs
+  - number of layers()(default: )
+  - number of nodes()(default: )
+  - the number of hidden units()(default: )
+  - epochs(The number times that the learning algorithm will work through the entire training dataset. One epoch consists of one full training cycle on the training set.)(default: 100)
 
 ### Benchmark
 I used Decision Tree Regressor as a bench mark model and made comparison between all models performance and the benchmark. Decision Tree Regressor is a tree-like model that is simple to understand and interpret, but often relatively unstable.
@@ -151,7 +153,18 @@ I conducted some feature engineering to make the given dataset to fit machine le
 - Markdown data has some NaN / negative values, so I convert that to zero.
 - Converted Date(yyyy-mm-dd format) to "year", "month", "week", and "day".
 - Store data is categorical, so I used One-Hot encoding.
-- (For only LSTM) I used Min-Max scaler to scale the input in the range of 0 to 1.
+
+
+For only LSTM, I used only 
+I used Min-Max scaler to scale the input in the range of 0 to 1.
+
+
+split 20 80 no shuffle
+
+When building your first LSTM, you will quickly realize that your input data must be in the form of a 3-dimensional array. The three dimensions are:
+Samples
+Time Steps (or window size)
+Features
 
 
 ### Implementation
@@ -233,14 +246,16 @@ In this section, the final model and any supporting qualities should be evaluate
 - _Can results found from the model be trusted?_
 
 ### Justification
+Below table shows the model performance(WMAE) of all models. Random Forest, XGBoost, and LSTM perform better than the benchmark Decision Tree. Although LSTM model uses only lagged sales data, the model  ---------. 
+
 ---- achieved WMAE ---- on the testing data, that is significantly better thant Decision Tree as the benchmark.
 
 |  Model  |  WMAE  |
 | ------  | ------ |
 |  Decision Tree(BM)  |  6,875  |
 |  Random Forest  |  4,425  |
-|  XGBoost  |  4,424  |
-|  LSTM  |  3,000  |
+|  XGBoost  |  4,395  |
+|  LSTM  |  3,267  |
 
 ## V. Conclusion
 
