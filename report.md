@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Project
 Takayuki Sato  
-September 28th, 2019
+November 28th, 2019
 
 ## I. Definition
 
@@ -177,7 +177,7 @@ Features
   - The fraction of columns to be randomly samples for each tree:
   - Learning rate:
   - The maximum depth of a tree:
-  - L1 regularization term on weight:
+  - L2 regularization term: L2 regularization term on weight
   - number of estimators:
   
 - LSTM implemented by using Keras module
@@ -201,40 +201,66 @@ Following parameters were tuned by using **GridSearchCV**.
 
 XGBoost  
 
+**alpha**: 
+  - Initial value:  
+  - Search values: [5,10,30,50,100]  
+  - Final value: 10
+  
+**n_estimators**: 
+  - Initial value:  
+  - Search values: [5,10,30,50,100]  
+  - Final value: 500
+  
 **max_depth**: 
   - Initial value:  
-  - Search values: [0.5,0.6,0.8,1]  
-  - Final value:  
+  - Search values: [5,10,14,30,50,100]  
+  - Final value: 14
 
 **learning_rate)**:  
   - Initial value:  
-  - Search values: [0.5,0.6,0.8,1]  
-  - Final value:  
+  - Search values: [0.1,0.3,0.5,0.7,1]  
+  - Final value: 0.1
   
 **min_child_weight**: 
   - Initial value:  
-  - Search values: [0.5,0.6,0.8,1]  
-  - Final value: 
+  - Search values: [0,0.2,0.4,0.6,0.8,1]  
+  - Final value: 1
 
 **colsample_bytree**:  
   - Initial value:  
-  - Search values: [0.5,0.6,0.8,1]  
-  - Final value: 
+  - Search values: [0.1,0.3,0.5,0.7,0.85 1]  
+  - Final value: 0.85
 
 **colsample_bylevel**: 
   - Initial value:  
   - Search values: [0.5,0.6,0.8,1]  
-  - Final value:  
+  - Final value: 1
 
 **reg_lambda**: 
-  - Initial value:  
-  - Search values: [0.5,0.6,0.8,1]  
-  - Final value:
+  - Initial value: 1
+  - Search values: [0,1,2,4,6,8,10]  
+  - Final value: 2
 
 **subsample**: 
   - Initial value:  
   - Search values: [0.5,0.6,0.8,1]  
-  - Final value: 
+  - Final value: 0.8
+
+
+
+ For LSTM, I tried to tune below hyper parameters.
+ 
+**sequence length**: 
+  - Initial value: 1 
+  - Final value: 4 (that means 4 weeks/1 month.) 
+
+**number of layers(and number of hidden units)**: 
+  - Initial value: 2 with hidden units of 50-50
+  - Final value: 3 with hidden units of 200-200-200 
+
+**number of epochs**: 
+  - Initial value: --
+  - Final value: ---
 
 ## IV. Results
 
