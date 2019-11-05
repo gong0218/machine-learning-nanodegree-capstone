@@ -27,7 +27,7 @@ This is a typical time series problem. General time series modeling framework(e.
 ### Metrics
 I used the weighted mean absolute error (WMAE) as evaluation metric.
 
-![equation](https://latex.codecogs.com/gif.latex?WMAE%20%3D%20%5Cfrac%7B1%7D%7B%5Csum%20w_%7Bi%7D%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%7Bw_%7Bi%7D%7D%5Cleft%20%7C%20%7By_%7Bi%7D%7D%20-%20%5Cwidehat%7By_%7Bi%7D%7D%20%5Cright%20%7C)
+![WMAE](path/WMAE.png "WMAE") 
 
 where
 
