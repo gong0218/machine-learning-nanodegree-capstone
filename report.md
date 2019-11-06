@@ -156,29 +156,25 @@ The input data for LSTM also must be in the form of a 3-dimensional array. The t
 
 3331
 .T
+転置して全てのStore-Departの組み合わせを列で表現する３３３１列
+
+1step前を
+
+
 
 
 Then I splitted the data into trainin and validation period((80% training set – 20% test) Since this is time series data, I splitted the data in sequential order(not randomely).
 
 ### Implementation
 
-- Random Forest
-  - number of estimators:
-  - minimum sample leaf size:
-  
-- XGBoost
-  - The fraction of columns to be randomly samples for each tree:
-  - Learning rate:
-  - The maximum depth of a tree:
-  - L2 regularization term: L2 regularization term on weight
-  - number of estimators:
-  
-- LSTM implemented by using Keras module
-  - number of layers:
-  - the number of hidden units:
-  - epochs:
+XGboost   linear etc
 
-The LSTM model is implemented by using Keras module. The network has 
+
+
+LSTMは1step先を予測し、その結果を入力に足して、さらに1step先を予測するということを繰り返した。
+
+The LSTM model is implemented by using Keras module. The network has ----
+I used Relu activation function.
 
 The model's performance is evaluated by its WMAE score on the test data.
 
@@ -208,7 +204,7 @@ XGBoost
   - Search values: [5,10,12,14,16,18,20,30,50,100]  
   - Final value: 14
 
-**learning_rate)**:  
+**learning_rate**:  
   - Initial value:  
   - Search values: [0.1,0.3,0.5,0.7,1]  
   - Final value: 0.1
@@ -267,17 +263,37 @@ In this section, the final model and any supporting qualities should be evaluate
 - _Is the model robust enough for the problem? Do small perturbations (changes) in training data or the input space greatly affect the results?_
 - _Can results found from the model be trusted?_
 
-### Justification
-Below table shows the model performance(WMAE) of all models. Random Forest, XGBoost, and LSTM perform better than the benchmark Decision Tree. Although LSTM model uses only lagged sales data, the model  ---------. 
+I evaluated all models' performance by using the validation data. Below table shows the model performance(WMAE) of all models.
 
----- achieved WMAE ---- on the testing data, that is significantly better thant Decision Tree as the benchmark.
 
+The LSTM model performed the best among all models.
 |  Model  |  WMAE  |
 | ------  | ------ |
 |  Decision Tree(BM)  |  6,875  |
 |  Random Forest  |  4,425  |
 |  XGBoost  |  4,395  |
 |  LSTM  |  3,267  |
+
+I also checked-----.
+Trainと Validationデータの予測グラフ
+Total Salesを使っている
+
+DTがTrainスラうまく予測できていない。
+RF、XGBoostはよりFitしている。
+LSTMはValida tion エリアの誤差が少ないのが見て取れる。
+
+### Justification
+KaggleからGetしたTest データの正解はないが、Kaggleに　予測結果をsubmitすることでWMAEのスコアを確認することができる。
+Below table shows the model performance(WMAE) of all models. Random Forest, XGBoost, and LSTM perform better than the benchmark Decision Tree. Although LSTM model uses only lagged sales data, the model  ---------. 
+
+---- achieved WMAE ---- on the testing data, that is significantly better thant Decision Tree as the benchmark.
+
+|  Model  |  WMAE  |
+| ------  | ------ |
+|  Decision Tree(BM)  |  6,---  |
+|  Random Forest  |  4,---  |
+|  XGBoost  |  4,---  |
+|  LSTM  |  3,---  |
 
 ## V. Conclusion
 
