@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Project
 Takayuki Sato  
-November 28th, 2019
+November 9th, 2019
 
 ## I. Definition
 
@@ -111,15 +111,7 @@ Walmart has three types of store. big sized A type store has big sales, whereas 
 ![scatter_size_sales_byStore](path/scatter_size_sales_byStore.png "scatter_size_sales_byStore")
 
 ### Algorithms and Techniques
-In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
-- _Are the algorithms you will use, including any default variables/parameters in the project clearly defined?_
-- _Are the techniques to be used thoroughly discussed and justified?_
-- _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
-
-
-In this project, I used Random Forest, XGBoost, and Long short-term memory for solving the problem. Weekly sales is the target.
-
-
+In this project, I used Random Forest, XGBoost, and Long short-term memory for solving the problem. Weekly sales is the target. For 2 tree models(Random Forest & XGBoost), I used all features that were provided as features.csv by kaggle. For LSTM, I used only lag sales as input. 
 
 The following parameters are mainly tuned to optimize the model(and a default parameter I tried at first.).
 
@@ -135,9 +127,10 @@ The following parameters are mainly tuned to optimize the model(and a default pa
   - number of estimators()(default: )
   
 - LSTM
-  - number of layers()(default: )
-  - number of nodes()(default: )
-  - the number of hidden units()(default: )
+  - number of layers(default:2)
+  - the number of hidden units(default:50 by eacy layer)
+  - the sequence length()(default:1)
+  - dropout rate for regularization(default:0.5)
   - epochs(The number times that the learning algorithm will work through the entire training dataset. One epoch consists of one full training cycle on the training set.)(default: 100)
 
 ### Benchmark
@@ -156,16 +149,16 @@ I conducted some feature engineering to make the given dataset to fit machine le
 
 
 For only LSTM, I used only 
-I used Min-Max scaler to scale the input in the range of 0 to 1.
+
+The input data has weekly sales of different stores/departments that highly vary in magnitudes. The input data needs to be scaled to make neural network learning and converge faster. I used Min-Max scaler to scale the input in the range of 0 to 1.
+
+The input data for LSTM also must be in the form of a 3-dimensional array. The three dimensions are Samples, Time Steps (the sequence length), and Features.
+
+3331
+.T
 
 
-split 20 80 no shuffle
-
-When building your first LSTM, you will quickly realize that your input data must be in the form of a 3-dimensional array. The three dimensions are:
-Samples
-Time Steps (or window size)
-Features
-
+Then I splitted the data into trainin and validation period((80% training set – 20% test) Since this is time series data, I splitted the data in sequential order(not randomely).
 
 ### Implementation
 
@@ -182,7 +175,6 @@ Features
   
 - LSTM implemented by using Keras module
   - number of layers:
-  - number of nodes:
   - the number of hidden units:
   - epochs:
 
@@ -213,7 +205,7 @@ XGBoost
   
 **max_depth**: 
   - Initial value:  
-  - Search values: [5,10,14,30,50,100]  
+  - Search values: [5,10,12,14,16,18,20,30,50,100]  
   - Final value: 14
 
 **learning_rate)**:  
@@ -227,12 +219,12 @@ XGBoost
   - Final value: 1
 
 **colsample_bytree**:  
-  - Initial value:  
-  - Search values: [0.1,0.3,0.5,0.7,0.85 1]  
+  - Initial value:1
+  - Search values: [0.1,0.3,0.5,0.7,0.85,0.9,1]  
   - Final value: 0.85
 
 **colsample_bylevel**: 
-  - Initial value:  
+  - Initial value:1 
   - Search values: [0.5,0.6,0.8,1]  
   - Final value: 1
 
@@ -242,13 +234,13 @@ XGBoost
   - Final value: 2
 
 **subsample**: 
-  - Initial value:  
+  - Initial value:1
   - Search values: [0.5,0.6,0.8,1]  
   - Final value: 0.8
 
 
 
- For LSTM, I tried to tune below hyper parameters.
+For LSTM, belows are final parameters I tried to tune, and they gave the best result.
  
 **sequence length**: 
   - Initial value: 1 
@@ -258,9 +250,13 @@ XGBoost
   - Initial value: 2 with hidden units of 50-50
   - Final value: 3 with hidden units of 200-200-200 
 
+**dropout**: 
+  - Initial value: 0.5
+  - Final value: 0.1
+  
 **number of epochs**: 
-  - Initial value: --
-  - Final value: ---
+  - Initial value: 100
+  - Final value: 3000
 
 ## IV. Results
 
@@ -297,6 +293,18 @@ In this section, you will summarize the entire end-to-end problem solution and d
 - _Were there any interesting aspects of the project?_
 - _Were there any difficult aspects of the project?_
 - _Does the final model and solution fit your expectations for the problem, and should it be used in a general setting to solve these types of problems?_
+
+
+The process used for this project can be summarised with the following steps:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+
 
 ### Improvement
 In this project, Basically, I only used original features and forecast methodlogies since I had to take a lot of time for hyper parameter tuning. If I were to continue with this project, adding features, such as, lagged variables and other economic indicators(GDP growth, consumer confidence index, etc.) is one of improvements I should explore.   
